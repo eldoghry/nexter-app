@@ -10,6 +10,47 @@ html {
 
 body {
   font-size: 62.5%; }
-  body > * {
+
+.container {
+  display: grid;
+  grid-template-rows: 80vh min-content 40vw repeat(3, min-content);
+  grid-template-columns: [sidebar-start] 8rem [sidebar-end full-start] 1fr [center-start] repeat(8, [col-start] 100px [col-end]) [center-end] 1fr [full-end]; }
+  .container > * {
     font-size: 2rem;
     padding: 3rem; }
+
+.sidebar {
+  background-color: chartreuse;
+  grid-row: 1 / -1; }
+
+.header {
+  background-color: red;
+  grid-column: full-start / col-end 7; }
+
+.realtors {
+  background-color: brown;
+  grid-column: col-start 8 / full-end; }
+
+.features {
+  background-color: burlywood;
+  grid-column: center-start / center-end; }
+
+.story__photos {
+  background-color: crimson;
+  grid-column: full-start / col-end 4; }
+
+.story__content {
+  background-color: aqua;
+  grid-column: col-start 5 / full-end; }
+
+.homes {
+  background-color: green;
+  grid-column: center-start / center-end; }
+
+.gallery {
+  background-color: cadetblue;
+  grid-column: center-start / center-end; }
+
+.footer {
+  background-color: blueviolet;
+  grid-column: full-start / full-end; }
