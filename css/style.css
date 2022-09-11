@@ -6,34 +6,61 @@
   box-sizing: inherit; }
 
 html {
-  box-sizing: border-box; }
-
-body {
+  box-sizing: border-box;
   font-size: 62.5%; }
 
+body {
+  line-height: 1.6;
+  font-weight: 300;
+  font-family: "Nunito", sans-serif;
+  color: #54483a; }
+
 .container {
+  background-color: #f9f7f6;
   display: grid;
   grid-template-rows: 80vh min-content 40vw repeat(3, min-content);
-  grid-template-columns: [sidebar-start] 8rem [sidebar-end full-start] 1fr [center-start] repeat(8, [col-start] 100px [col-end]) [center-end] 1fr [full-end]; }
-  .container > * {
-    font-size: 2rem;
-    padding: 3rem; }
+  grid-template-columns: [sidebar-start] 8rem [sidebar-end full-start] minmax(6rem, 1fr) [center-start] repeat(8, [col-start] minmax(min-content, 14rem) [col-end]) [center-end] minmax(6rem, 1fr) [full-end]; }
+
+.heading-4 {
+  font-weight: 400;
+  font-family: "Josefin Sans", sans-serif; }
+
+.heading-4 {
+  font-size: 1.9rem; }
 
 .sidebar {
-  background-color: chartreuse;
+  background-color: #c69963;
   grid-row: 1 / -1; }
 
 .header {
-  background-color: red;
-  grid-column: full-start / col-end 7; }
+  background-color: #101d2c;
+  grid-column: full-start / col-end 6; }
 
 .realtors {
-  background-color: brown;
-  grid-column: col-start 8 / full-end; }
+  background-color: #101d2c;
+  grid-column: col-start 7 / full-end; }
 
 .features {
-  background-color: burlywood;
-  grid-column: center-start / center-end; }
+  margin: 15rem 0;
+  grid-column: center-start / center-end;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+  grid-gap: 6rem; }
+
+.feature {
+  display: grid;
+  grid-template-columns: min-content 1fr;
+  grid-row-gap: 1.5rem;
+  grid-column-gap: 2.5rem;
+  align-content: start; }
+  .feature__icon {
+    width: 4.5rem;
+    height: 4.5rem;
+    fill: #c69963;
+    grid-row: 1 / span 2;
+    transform: translateY(-1rem); }
+  .feature__text {
+    font-size: 1.7rem; }
 
 .story__photos {
   background-color: crimson;
@@ -52,5 +79,5 @@ body {
   grid-column: center-start / center-end; }
 
 .footer {
-  background-color: blueviolet;
+  background-color: #101d2c;
   grid-column: full-start / full-end; }
