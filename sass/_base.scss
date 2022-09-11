@@ -35,7 +35,6 @@ body {
 }
 
 .container {
-  background-color: $color-grey-light-1;
   display: grid;
   grid-template-rows: 80vh min-content 40vw repeat(3, min-content);
   grid-template-columns:
