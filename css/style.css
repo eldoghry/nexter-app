@@ -196,5 +196,32 @@ body {
   grid-column: center-start / center-end; }
 
 .footer {
+  color: #f9f7f6;
   background-color: #101d2c;
+  padding: 8rem;
   grid-column: full-start / full-end; }
+
+.nav {
+  list-style: none;
+  display: grid;
+  grid-gap: 2rem;
+  grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+  justify-items: center;
+  align-items: center; }
+  .nav__link, .nav__link:visited {
+    display: inline-block;
+    color: currentColor;
+    text-decoration: none;
+    font-size: 1.4rem;
+    text-align: center;
+    padding: 1.5rem;
+    transition: all 0.2s; }
+  .nav__link:hover {
+    transform: translateY(-3px);
+    background-color: rgba(255, 255, 255, 0.1); }
+
+.copyright {
+  width: 80%;
+  margin: 8rem auto 0;
+  text-align: center;
+  font-size: 1.3rem; }
