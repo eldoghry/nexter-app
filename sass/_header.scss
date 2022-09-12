@@ -17,6 +17,14 @@
   align-content: center;
   grid-row-gap: 1.5rem;
 
+  @media screen and (max-width: $bp-medium) {
+    grid-column: full-start / full-end;
+  }
+
+  @media screen and (max-width: $bp-small) {
+    padding: 6rem 3rem;
+  }
+
   &__logo {
     height: 4rem;
     justify-self: center;

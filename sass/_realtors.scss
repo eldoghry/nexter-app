@@ -2,12 +2,16 @@
   background-color: $color-secondary;
   grid-column: col-start 7 / full-end;
 
-  // padding: 3rem;
   display: grid;
   justify-content: center;
   align-content: center;
   justify-items: center;
   grid-gap: 3rem;
+
+  @media screen and (max-width: $bp-medium) {
+    padding: 3rem;
+    grid-column: full-start / full-end;
+  }
 
   &__list {
     display: grid;
@@ -15,6 +19,14 @@
     align-items: center;
     grid-column-gap: 2rem;
     grid-row-gap: 5vh;
+
+    @media screen and (max-width: $bp-medium) {
+      grid-template-columns: repeat(3, min-content max-content);
+    }
+
+    @media screen and (max-width: $bp-small) {
+      grid-template-columns: min-content max-content;
+    }
   }
 
   &__details {
